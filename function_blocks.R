@@ -273,7 +273,7 @@ z_ci<-function(data_e,i_j,j,not_stopped,sd_e,alpha,stop_thresh=2){
 			} else {return('bug in program')}	
 	} else {
 		t_lo<-max(0,i_j-12*2^K_halfalpha+1)*2^(J-j)/n-1/(2*n)
-		t_hi<- min(floor((n+1)*2^(j-J)),i_j+12*2^K_halfalpha-2)*2^(J-j)/n-1/(2*n)
+		t_hi<- min(ceiling((n+1)*2^(j-J)),i_j+12*2^K_halfalpha-2)*2^(J-j)/n-1/(2*n)
 	}
 	return(c(t_lo,t_hi))
 }
